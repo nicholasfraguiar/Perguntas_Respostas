@@ -1,4 +1,3 @@
-<script type="text/php">
 <?php include 'database.php'; ?>
 <?php
 $query = "SELECT * FROM `questoes`";
@@ -7,7 +6,6 @@ $results = $mysqli->query($query) or die($mysqli->error.__LINE__);
 $total = $results->num_rows;
 
 ?>
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +28,7 @@ $total = $results->num_rows;
             <h2>Está Pronto ?</h2>
             <p>Perguntas sobre assusntos variados, com temas como Geografia, História, Biologia e Física...</p>
             <ul>
-                <li><strong>Quantidade de Questões:</strong> <script type="text/php"><?php echo $total; ?></script> </li>
+                <li><strong>Quantidade de Questões:</strong> <?php echo $total; ?> </li>
                 <li><strong>Apenas múltipla escolha.</strong></li>
             </ul>
             <a href="questoes.php?n=1" class="start">Iniciar</a>
