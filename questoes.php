@@ -1,3 +1,4 @@
+<script type="text/php">
 <?php include 'database.php'; ?>
 <?php session_start(); ?>
 <?php
@@ -21,6 +22,7 @@ $query = "SELECT * FROM `alternativas` WHERE numero_questao = $number";
 $alternativas = $mysqli->query($query) or die($mysqli->error.__LINE__);
  
 ?>
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +41,7 @@ $alternativas = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
     <main>
         <div class="container">
-            <div class=atual> Questão <?php echo $questao['numero_questao']; ?> de <?php echo $total; ?></div>
+            <div class=atual> Questão <script type="text/php"><?php echo $questao['numero_questao']; ?></script> de <script type="text/php"><?php echo $total; ?></script></div>
             <p class=question>
                 <?php echo $questao['texto'] ; ?>
             </p>
