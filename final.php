@@ -28,8 +28,19 @@ $query = "SELECT * FROM `questoes`";
             <h2>Parabéns por terminar o Quiz!!</h2>
             <p>Obrigado por testar esta aplicação!!</p>
             <p>Você acertou: <?php echo $_SESSION['score']; ?></p>
-            <p> <?php echo ($_SESSION["score"]/$total * 100); ?> % das questões.</p>
+            <p> <?php echo round(($_SESSION["score"]/$total * 100)/2); ?> % das questões.</p>
             <a href="questoes.php?n=1" class="start">Tente Novamente</a>
+        </div>
+        <div>
+            <p>Respostas Corretas: (Em ordem.)</p>
+            <?php 
+            $query = "SELECT * FROM `alternativas` WHERE a_correta = 1";
+
+            $alternativas = $mysqli->query($query) or die($mysqli->error.__LINE__);
+            ?>
+            <?php while($row = $alternativas->fetch_assoc()): ?>
+                        <li><?php echo $row['texto']; ?></li>
+                    <?php endwhile; ?>
         </div>
     </main>
 
