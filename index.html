@@ -6,7 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <?php include 'footer.php';?>
+    <?php include 'database.php'; ?>
+<?php
+$query = "SELECT * FROM `questoes`";
+
+$results = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$total = $results->num_rows;
+
+?>
     <title>Perguntas Aleatórias </title>
 </head>
 <body>
