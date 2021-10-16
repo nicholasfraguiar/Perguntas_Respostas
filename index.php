@@ -26,7 +26,7 @@ $total = $results->num_rows;
     <main>
         <div class="container">
             <h2>Está Pronto ?</h2>
-            <p>Perguntas sobre assusntos variados, com temas como Geografia, História, Biologia e Física...</p>
+            <p>Perguntas sobre assusntos variados.</p>
             <ul>
                 <li><strong>Quantidade de Questões:</strong> <?php echo $total; ?> </li>
                 <li><strong>Apenas múltipla escolha.</strong></li>
