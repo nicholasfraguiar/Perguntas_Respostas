@@ -32,7 +32,7 @@ $query = "SELECT * FROM `questoes`";
             <a href="questoes.php?n=1" class="start">Tente Novamente</a>
         </div>
         <div>
-            <p>Respostas Corretas: (Em ordem.)</p>
+            <h3>Respostas Corretas: (Em ordem.)</h3>
             <?php 
             $query = "SELECT * FROM `alternativas` WHERE a_correta = 1";
 
