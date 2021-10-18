@@ -28,7 +28,7 @@ $query = "SELECT * FROM `questoes`";
             <h2>Parabéns por terminar o Quiz!!</h2>
             <p>Obrigado por testar esta aplicação!!</p>
             <p>Você acertou: <?php echo $_SESSION['score']; ?></p>
-            <p> <?php echo round(($_SESSION["score"]/$total * 100)/2); ?> % das questões.</p>
+            <p> <?php echo round(($_SESSION["score"]/$total * 100),2); ?> % das questões.</p>
             <a href="questoes.php?n=1" class="start">Tente Novamente <?php $_SESSION['score'] = 0;  ?></a>
         </div>
         <div>
